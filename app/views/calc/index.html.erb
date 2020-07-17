@@ -1,0 +1,32 @@
+<h1>Calc</h1>
+<p> Требуется разработать форму с использованием Ruby on Rails для формирования запроса в виде</p>
+<p> арифметических действий и вывода конечного результата.</p>
+<p> То есть на входе строка-запрос с использованием цифр и арифметических знаков(+,-,*,:),</p>
+<p> на выходе конечный результат.</p>
+
+<h3>Cделаю несколько вариантов</h3>
+
+<h5>Вариант 1</h5>
+
+<%= form_with url: calc_string_calc_path, local: false do %>
+  <%= label_tag(:q, "введите алгоритм (пример:1+2*(3+2/2) )") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("посчитать") %>
+<% end %>
+<br>
+<div id="result_calc">
+  <%= render 'calc/string_calc' %>
+</div>
+
+<hr>
+<br>
+<h5>Вариант 2</h5>
+<%= form_with url: calc_string_calc_two_path, local: false do %>
+  <%= label_tag(:q, "введите алгоритм (пример:1+2*(3+2/2) )") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("посчитать") %>
+<% end %>
+<br>
+<div id="result_calc_two">
+  <%= render 'calc/string_calc_two' %>
+</div>
